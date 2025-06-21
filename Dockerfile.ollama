@@ -1,0 +1,25 @@
+# Dockerfile for the Ollama service
+
+# Stage 1: Pull the model and create a snapshot
+FROM ollama/ollama as puller
+
+# Copy the model pulling script into the container
+COPY pull_model.sh /pull_model.sh
+
+# Make the script executable
+RUN chmod +x /pull_model.sh
+
+# Run the script to pull the model
+RUN /pull_model.sh
+
+# Stage 2: Create the final, clean image
+FROM ollama/ollama
+
+# Copy the downloaded models from the 'puller' stage
+COPY --from=puller /root/.ollama/models /root/.ollama/models
+
+# Expose the Ollama API port
+EXPOSE 11434
+
+# The base image's default command is to run "ollama serve",
+# so we don't need to specify a CMD or ENTRYPOINT.
