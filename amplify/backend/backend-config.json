@@ -1,0 +1,243 @@
+{
+  "api": {
+    "garygerberwebsite": {
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [],
+          "defaultAuthentication": {
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 7
+            },
+            "authenticationType": "API_KEY"
+          }
+        }
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync"
+    }
+  },
+  "auth": {
+    "garygerberwebsiteb98b18c1": {
+      "customAuth": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "garygerberwebsiteb98b18c1DefineAuthChallenge",
+          "triggerProvider": "Cognito"
+        },
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "garygerberwebsiteb98b18c1CreateAuthChallenge",
+          "triggerProvider": "Cognito"
+        },
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "garygerberwebsiteb98b18c1VerifyAuthChallengeResponse",
+          "triggerProvider": "Cognito"
+        },
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "garygerberwebsiteb98b18c1CustomMessage",
+          "triggerProvider": "Cognito"
+        },
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "garygerberwebsiteb98b18c1PostConfirmation",
+          "triggerProvider": "Cognito"
+        }
+      ],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
+    }
+  },
+  "function": {
+    "garygerberwebsiteb98b18c1CreateAuthChallenge": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "garygerberwebsiteb98b18c1CustomMessage": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "garygerberwebsiteb98b18c1DefineAuthChallenge": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "garygerberwebsiteb98b18c1PostConfirmation": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "garygerberwebsiteb98b18c1VerifyAuthChallengeResponse": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_garygerberwebsiteb98b18c1CreateAuthChallenge_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "garygerberwebsiteb98b18c1CreateAuthChallenge"
+        }
+      ]
+    },
+    "AMPLIFY_function_garygerberwebsiteb98b18c1CreateAuthChallenge_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "garygerberwebsiteb98b18c1CreateAuthChallenge"
+        }
+      ]
+    },
+    "AMPLIFY_function_garygerberwebsiteb98b18c1CustomMessage_EMAILMESSAGE": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "garygerberwebsiteb98b18c1CustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_garygerberwebsiteb98b18c1CustomMessage_EMAILSUBJECT": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "garygerberwebsiteb98b18c1CustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_garygerberwebsiteb98b18c1CustomMessage_REDIRECTURL": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "garygerberwebsiteb98b18c1CustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_garygerberwebsiteb98b18c1CustomMessage_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "garygerberwebsiteb98b18c1CustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_garygerberwebsiteb98b18c1CustomMessage_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "garygerberwebsiteb98b18c1CustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_garygerberwebsiteb98b18c1DefineAuthChallenge_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "garygerberwebsiteb98b18c1DefineAuthChallenge"
+        }
+      ]
+    },
+    "AMPLIFY_function_garygerberwebsiteb98b18c1DefineAuthChallenge_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "garygerberwebsiteb98b18c1DefineAuthChallenge"
+        }
+      ]
+    },
+    "AMPLIFY_function_garygerberwebsiteb98b18c1PostConfirmation_GROUP": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "garygerberwebsiteb98b18c1PostConfirmation"
+        }
+      ]
+    },
+    "AMPLIFY_function_garygerberwebsiteb98b18c1PostConfirmation_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "garygerberwebsiteb98b18c1PostConfirmation"
+        }
+      ]
+    },
+    "AMPLIFY_function_garygerberwebsiteb98b18c1PostConfirmation_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "garygerberwebsiteb98b18c1PostConfirmation"
+        }
+      ]
+    },
+    "AMPLIFY_function_garygerberwebsiteb98b18c1VerifyAuthChallengeResponse_RECAPTCHASECRET": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "garygerberwebsiteb98b18c1VerifyAuthChallengeResponse"
+        }
+      ]
+    },
+    "AMPLIFY_function_garygerberwebsiteb98b18c1VerifyAuthChallengeResponse_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "garygerberwebsiteb98b18c1VerifyAuthChallengeResponse"
+        }
+      ]
+    },
+    "AMPLIFY_function_garygerberwebsiteb98b18c1VerifyAuthChallengeResponse_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "garygerberwebsiteb98b18c1VerifyAuthChallengeResponse"
+        }
+      ]
+    }
+  }
+}

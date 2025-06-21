@@ -1,0 +1,16 @@
+{
+  "trigger": true,
+  "modules": [
+    "captcha-verify"
+  ],
+  "parentResource": "garygerberwebsiteb98b18c1",
+  "functionName": "garygerberwebsiteb98b18c1VerifyAuthChallengeResponse",
+  "resourceName": "garygerberwebsiteb98b18c1VerifyAuthChallengeResponse",
+  "parentStack": "auth",
+  "triggerEnvs": "[]",
+  "triggerDir": "/snapshot/repo/build/node_modules/@aws-amplify/amplify-category-auth/provider-utils/awscloudformation/triggers/VerifyAuthChallengeResponse",
+  "triggerTemplate": "VerifyAuthChallengeResponse.json.ejs",
+  "triggerEventPath": "VerifyAuthChallengeResponse.event.json",
+  "roleName": "garygerberwebsiteb98b18c1VerifyAuthChallengeResponse",
+  "skipEdit": true
+}

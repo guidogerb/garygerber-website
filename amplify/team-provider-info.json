@@ -1,0 +1,51 @@
+{
+  "prod": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-garygerberwebsite-prod-112024-authRole",
+      "UnauthRoleArn": "arn:aws:iam::471112830678:role/amplify-garygerberwebsite-prod-112024-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::471112830678:role/amplify-garygerberwebsite-prod-112024-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-garygerberwebsite-prod-112024-deployment",
+      "UnauthRoleName": "amplify-garygerberwebsite-prod-112024-unauthRole",
+      "StackName": "amplify-garygerberwebsite-prod-112024",
+      "StackId": "arn:aws:cloudformation:us-east-1:471112830678:stack/amplify-garygerberwebsite-prod-112024/054ffc90-4ec4-11f0-9428-0ee8590be0e5",
+      "AmplifyAppId": "d31al9t04be7ye",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-garygerberwebsite-prod-112024-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
+    },
+    "categories": {
+      "auth": {
+        "garygerberwebsiteb98b18c1": {}
+      },
+      "function": {
+        "garygerberwebsiteb98b18c1DefineAuthChallenge": {
+          "deploymentBucketName": "amplify-garygerberwebsite-prod-112024-deployment",
+          "s3Key": "amplify-builds/garygerberwebsiteb98b18c1DefineAuthChallenge-526778504b71436f7170-build.zip"
+        },
+        "garygerberwebsiteb98b18c1CreateAuthChallenge": {
+          "deploymentBucketName": "amplify-garygerberwebsite-prod-112024-deployment",
+          "s3Key": "amplify-builds/garygerberwebsiteb98b18c1CreateAuthChallenge-766e344f6a77506b6e44-build.zip"
+        },
+        "garygerberwebsiteb98b18c1VerifyAuthChallengeResponse": {
+          "RECAPTCHASECRET": "6LeK7WgrAAAAAOwe-uBh1rhQCAFxhyBPEwSr9CT3",
+          "deploymentBucketName": "amplify-garygerberwebsite-prod-112024-deployment",
+          "s3Key": "amplify-builds/garygerberwebsiteb98b18c1VerifyAuthChallengeResponse-784b48714a54496b646a-build.zip"
+        },
+        "garygerberwebsiteb98b18c1CustomMessage": {
+          "REDIRECTURL": "/",
+          "EMAILSUBJECT": "Welcome! Let's confirm your email.",
+          "EMAILMESSAGE": "Hi {{username}},Thank you for joining the Guido Gerber Publishing community! We’re excited to give you access to our music scores, AI tools, and behind-the-scenes content.To keep your account secure, we need to verify that this email address is really yours. Simply click the button (or paste the link) below within the next 24 hours:<div style=\"text-align:center; margin:32px 0;\"> <a href=\"{{##ConfirmLink##}}\" style=\"background:#4f46e5; color:#ffffff; padding:12px 28px; bo",
+          "deploymentBucketName": "amplify-garygerberwebsite-prod-112024-deployment",
+          "s3Key": "amplify-builds/garygerberwebsiteb98b18c1CustomMessage-6c58753368704b634558-build.zip"
+        },
+        "garygerberwebsiteb98b18c1PostConfirmation": {
+          "GROUP": "",
+          "deploymentBucketName": "amplify-garygerberwebsite-prod-112024-deployment",
+          "s3Key": "amplify-builds/garygerberwebsiteb98b18c1PostConfirmation-4e2b426e735551696b61-build.zip"
+        }
+      },
+      "api": {
+        "garygerberwebsite": {}
+      }
+    }
+  }
+}
